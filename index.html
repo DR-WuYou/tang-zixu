@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#261b1b">
+  <meta name="description" content="Tang Zixu · 北京大学本科生 · 医学影像技术。以影像为起点，探索医学与技术的交汇。">
+  <title>Tang Zixu — 医学影像技术</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Tang Zixu，返回顶部">tz<span class="logo-period">.</span></a>
+    <nav class="desktop-nav" aria-label="主导航"><a href="#about">关于我</a><a href="#observe">影像观察</a><a href="#profile">个人信息</a></nav>
+    <div class="header-actions"><button class="motion-toggle" aria-pressed="false" aria-label="暂停动态效果"><span class="motion-symbol" aria-hidden="true">Ⅱ</span><span class="motion-label">动效</span></button><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="展开导航"><span></span><span></span></button></div>
+  </header>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="移动端导航" hidden><a href="#about">关于我<span>↗</span></a><a href="#observe">影像观察<span>↗</span></a><a href="#profile">个人信息<span>↗</span></a></nav>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-art scene-surface"><canvas id="hero-canvas" aria-label="可拖动旋转的暖色分层几何体，医学影像主题的抽象视觉"></canvas><span class="scene-corner top-left" aria-hidden="true"></span><span class="scene-corner bottom-right" aria-hidden="true"></span></div>
+      <div class="hero-intro">
+        <p class="university"><span class="live-dot" aria-hidden="true"></span>北京大学 · 本科</p>
+        <p class="hero-statement">看见，<br>不止于表面。</p>
+        <p class="hero-major">医学影像技术<br><span>Medical Imaging Technology</span></p>
+      </div>
+      <div class="floating-note"><span class="note-marker" aria-hidden="true"></span><span>层层深入<br><small>拖动图形，改变视角</small></span></div>
+      <h1 id="hero-name" class="hero-name"><span>Tang</span> <span>Zixu</span><span class="name-dot" aria-hidden="true">.</span></h1>
+      <div class="hero-bottom"><a class="scroll-cue" href="#about"><span class="circle-arrow" aria-hidden="true">↓</span><span>向下，了解我</span></a><p>在医学与技术之间<br><span>保持好奇，持续探索。</span></p></div>
+    </section>
+
+    <section class="about-section paper-section" id="about" aria-labelledby="about-title">
+      <div class="section-cap"><span class="section-kicker">关于我</span><span class="small-cross" aria-hidden="true">＋</span></div>
+      <div class="about-layout">
+        <div class="about-title-wrap"><h2 id="about-title" class="display-title">从影像出发。<br>向更深处探索。</h2><p class="about-caption">Medicine meets technology.</p></div>
+        <div class="about-text"><p class="lead">你好，我是 <strong>Tang Zixu</strong>，<br>北京大学医学影像技术专业本科生。</p><p>影像让不可见的信息被看见，也让医学与技术发生联系。这里是我的个人空间，从专业学习出发，记录观察与探索。</p><a class="text-link" href="#observe">换个视角，认识影像<span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="education-strip"><div><span>所在学校</span><strong>北京大学</strong><small>Peking University</small></div><div><span>学习阶段</span><strong>本科</strong><small>Undergraduate</small></div><div><span>专业方向</span><strong>医学影像技术</strong><small>Medical Imaging Technology</small></div></div>
+    </section>
+
+    <section class="observe-section" id="observe" aria-labelledby="observe-title">
+      <div class="observe-heading"><p class="section-kicker">影像观察</p><h2 id="observe-title" class="display-title">同一个整体，<br>不止一种看法。</h2><p class="observe-intro">从整体到分层，再走进一个截面。<br>试着移动切片，发现视角带来的变化。</p></div>
+      <div class="observation-studio">
+        <div class="studio-bar"><span><span class="studio-dot" aria-hidden="true"></span>分层观察</span><span class="studio-note">抽象几何示意</span></div>
+        <div class="studio-main">
+          <div class="studio-controls">
+            <div class="view-switch" role="group" aria-label="观察模式">
+              <button class="view-option active" data-mode="0" aria-pressed="true"><span class="view-line" aria-hidden="true"></span><span>整体<small>Whole</small></span><span class="mode-arrow" aria-hidden="true">↗</span></button>
+              <button class="view-option" data-mode="1" aria-pressed="false"><span class="view-line" aria-hidden="true"></span><span>分层<small>Layers</small></span><span class="mode-arrow" aria-hidden="true">↗</span></button>
+              <button class="view-option" data-mode="2" aria-pressed="false"><span class="view-line" aria-hidden="true"></span><span>截面<small>Slice</small></span><span class="mode-arrow" aria-hidden="true">↗</span></button>
+            </div>
+            <p id="view-description" class="view-description" aria-live="polite">先看到整体，再寻找其中的结构与联系。</p>
+            <div class="slice-control"><label for="slice-range">观察位置<output id="slice-value" for="slice-range">中部</output></label><input id="slice-range" type="range" min="-80" max="80" value="0" step="1" aria-valuetext="中部"><div class="range-ends" aria-hidden="true"><span>下部</span><span>上部</span></div></div>
+            <button class="reset-view">恢复初始视角<span aria-hidden="true">↺</span></button>
+          </div>
+          <div class="studio-canvas-wrap scene-surface"><canvas id="study-canvas" aria-label="分层几何体，可用左侧按钮和观察位置滑块改变显示"></canvas><div class="canvas-hint"><span aria-hidden="true">↔</span>拖动旋转 · 切换视角</div></div>
+        </div>
+        <div class="studio-bottom"><span>观察结构</span><span class="studio-bottom-line" aria-hidden="true"></span><span>理解层次</span><span class="studio-bottom-line" aria-hidden="true"></span><span>连接信息</span></div>
+      </div>
+      <div class="perspectives"><div><h3>看见原理</h3><p>影像怎样形成？从信号出发，理解图像的来处。</p></div><div><h3>理解信息</h3><p>图像表达了什么？从细节中辨认结构与关系。</p></div><div><h3>连接医学</h3><p>技术能回答什么？在具体问题中理解方法的价值。</p></div></div>
+    </section>
+
+    <section class="profile-section paper-section" id="profile" aria-labelledby="profile-title">
+      <div class="profile-top"><p class="section-kicker">个人信息</p><span class="profile-note">A little more about me.</span></div>
+      <div class="profile-layout"><div><h2 id="profile-title" class="display-title">很高兴，<br>在这里遇见你。</h2><p class="profile-summary">Tang Zixu<br>北京大学 · 医学影像技术</p></div><div class="identity-card"><span class="card-label">个人名片</span><div class="identity-name">Tang Zixu</div><dl><div><dt>学校</dt><dd>北京大学</dd></div><div><dt>学历阶段</dt><dd>本科</dd></div><div><dt>专业</dt><dd>医学影像技术</dd></div></dl><button id="copy-name" class="copy-button">复制姓名<span aria-hidden="true">⧉</span></button><span id="copy-status" role="status" class="copy-status"></span></div></div>
+      <footer class="site-footer"><a class="footer-wordmark" href="#top">Tang Zixu<span aria-hidden="true">↗</span></a><div class="footer-line"><span>© <span id="year">2026</span> Tang Zixu</span><a href="#top">回到顶部<span aria-hidden="true">↑</span></a></div></footer>
+    </section>
+  </main>
+  <script src="visual.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
